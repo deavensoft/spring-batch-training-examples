@@ -31,7 +31,7 @@ public class E03TaskletJobConfiguration {
     return jobBuilderFactory.get("jobWithTasklet")
         .incrementer(new RunIdIncrementer())
         .start(tasklet())
-//        .next(anotherTasklet())
+        .next(anotherTasklet())
         .build();
 
   }

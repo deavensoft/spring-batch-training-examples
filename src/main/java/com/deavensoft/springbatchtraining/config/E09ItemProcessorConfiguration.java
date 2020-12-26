@@ -74,7 +74,6 @@ public class E09ItemProcessorConfiguration {
         .reader(flatFileItemReader)
         .processor(new ProductProcessor())
         .writer(new ConsoleItemWriter())
-        .faultTolerant()
         .build();
   }
 

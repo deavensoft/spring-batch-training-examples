@@ -52,7 +52,7 @@ public class E05ChunkProcessingConfiguration {
              InMemoryReader itemReader,
              Add10ItemProcessor itemProcessor){
     return stepBuilderFactory.get("step2").
-        <Integer,Integer>chunk(3)
+        <Integer,Integer>chunk(5)
         .reader(itemReader)
         .processor(itemProcessor)
         .writer(new ConsoleItemWriter())

@@ -76,7 +76,7 @@ public class E11SkipConfiguration {
         .writer(new ConsoleItemWriter())
         .faultTolerant()
         .skip(FlatFileParseException.class)
-        .skipLimit(1)
+        .skipLimit(10)
         .listener(new ProductSkipListener())
         .build();
   }

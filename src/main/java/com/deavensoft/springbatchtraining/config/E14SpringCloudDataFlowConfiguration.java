@@ -20,13 +20,13 @@ public class E14SpringCloudDataFlowConfiguration {
   Job job(JobBuilderFactory jobBuilderFactory,
           StepBuilderFactory stepBuilderFactory) {
 
-    return jobBuilderFactory.get("helloByName")
+    return jobBuilderFactory.get("helloEnjoying")
         .start(stepBuilderFactory.get("jobStep1")
             .tasklet(
                 (contribution, chunkContext) -> {
                   String name = chunkContext.getStepContext().getStepExecution().getJobParameters()
                       .getString("name");
-                  log.info("Hello {}! Job has run!", name != null ?  name : "World");
+                  log.info("Hello {}! Job has enjoyed running!", name != null ?  name : "World");
                   return RepeatStatus.FINISHED;
             })
             .build())

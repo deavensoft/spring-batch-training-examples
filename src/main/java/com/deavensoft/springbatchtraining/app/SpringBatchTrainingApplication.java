@@ -15,11 +15,12 @@ import com.deavensoft.springbatchtraining.config.E12PartitioningConfiguration;
 import com.deavensoft.springbatchtraining.config.E14SpringCloudDataFlowConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.task.configuration.EnableTask;
 import org.springframework.context.annotation.Import;
 
 
 @SpringBootApplication
-@Import(E01HelloWorldJobConfiguration.class)
+//@Import(E01HelloWorldJobConfiguration.class)
 //@Import(E02HelloWorldWithIncrementerJobConfiguration.class)
 //@Import(E03TaskletJobConfiguration.class)
 //@Import(E04JobStepListenerConfiguration.class)
@@ -31,8 +32,8 @@ import org.springframework.context.annotation.Import;
 //@Import(E10IFlowStepsConfiguration.class)
 //@Import(E11SkipConfiguration.class)
 //@Import(E12PartitioningConfiguration.class)
-//@Import(E14SpringCloudDataFlowConfiguration.class)
-//@EnableTask
+@Import(E14SpringCloudDataFlowConfiguration.class)
+@EnableTask
 public class SpringBatchTrainingApplication {
 
 	public static void main(String[] args) {

@@ -84,7 +84,7 @@ public class E12PartitioningConfiguration {
     return stepBuilderFactory.get("partitionStep")
         .partitioner(slaveStep.getName(), columnRangePartitioner)
         .step(slaveStep)
-        .gridSize(3)
+        .gridSize(5)
         .taskExecutor(new SimpleAsyncTaskExecutor())
         .build();
   }
