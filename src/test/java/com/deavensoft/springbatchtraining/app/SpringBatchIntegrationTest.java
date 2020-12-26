@@ -1,7 +1,7 @@
 package com.deavensoft.springbatchtraining.app;
 
 import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 import com.deavensoft.springbatchtraining.testapp.E13UnitTestingApplication;
 import java.util.Collection;
